@@ -1,4 +1,6 @@
 ﻿using System;
+using EFCoreQuerys.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreDataAnnotations
 {
@@ -6,7 +8,11 @@ namespace EFCoreDataAnnotations
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using var _context = new ApplicationContext();
+
+            _context.Database.EnsureDeleted();
+
+            _context.Database.EnsureCreated();
         }
     }
 }
