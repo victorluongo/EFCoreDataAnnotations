@@ -21,5 +21,10 @@ namespace EFCoreDataAnnotations.Models
         
         [MaxLength(150)]
         public string Description {get; set;}
+
+        public Airport Departure {get; set;}
+        
+        public Airport Arrival {get; set;}
+
     }
 }

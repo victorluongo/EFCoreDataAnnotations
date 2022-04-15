@@ -14,5 +14,11 @@ namespace EFCoreDataAnnotations.Models
         public string Description {get; set;}
         public double Latitude {get; set;}
         public double Longitude {get; set;}        
+
+        [InverseProperty("Departure")]
+        public ICollection<Flight> Departure {get; set;}
+        
+        [InverseProperty("Arrival")]
+        public ICollection<Flight> Arrival {get; set;}        
     }
 }
