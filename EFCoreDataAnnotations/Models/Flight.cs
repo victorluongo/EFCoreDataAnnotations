@@ -26,5 +26,7 @@ namespace EFCoreDataAnnotations.Models
         
         public Airport Arrival {get; set;}
 
+        [NotMapped]
+        public DateTime EAT {get; set;}
     }
 }
